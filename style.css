@@ -20,13 +20,15 @@ header {
 	margin: auto;
 }
 .logo {
-	width: 150px;
+	height: 70px;
 	float: left;
 }
 .nav-list {
+	height: 70px;
 	text-align: right;
-	padding-top: 23px;
-	margin: 0 ;
+	line-height: 70px;
+	/*padding-top: 23px;
+	margin: 0 ;*/
 }
 .nav-list-item {
 	list-style: none;
@@ -85,25 +87,37 @@ main {
 
 }
 .portfolio-image {
-	width: 300px;
 	height: 250px;
-	margin: 0 10px 10px 0;
+	/*margin: 0 10px 10px 0;*/
+	position: relative;
+	right: 57px;
 	background-size: cover;
 	background-position: center;
 }
 .portfolio-image2 {
-	width: 300px;
 	height: 250px;
-	margin: 0 10px 10px 0;
+	/*margin: 0 10px 10px 0;*/
+	position: relative;
+	right: 57px;
+	background-size: cover;
+	background-position: center;
 }
 .line-height{
 	line-height: 0;
+	width: 920px;
 }
-.portfolio-image:nth-child(3) {
+.line-height div:nth-child(3) {
 	margin-right: 0;
 }
-.portfolio-image2:nth-child(3) {
+.line-height div:nth-child(6) {
 	margin-right: 0;
+}
+.image1 {
+	width: 300px;
+	/*height: 250px;*/
+	margin: 0 10px 10px 0;
+	float: left;
+	overflow: hidden;
 }
 
 
@@ -176,14 +190,14 @@ main {
 	margin: auto;
 	border-bottom: 3px solid #EC715F;
 }
+
+
 .profile-text {
 	text-align: center;
 	font-size: 16px;
 	color: #000000;
 	padding: 30px 0;
 }
-
-
 
 .profile-box {
 	width: 1024px;
@@ -256,10 +270,12 @@ main {
 .mail {
 	font-size: 20px;
 	padding-bottom: 5px;
+	text-align: left;
 }
 .tell {
 	font-size: 20px;
 	padding: 20px 0 5px 0;
+	text-align: left;
 }
 .sns {
 	font-size: 20px;
@@ -267,7 +283,9 @@ main {
 	padding-bottom: 5px;
 	/*float: left;*/
 }
-
+.address {
+	text-align: center;
+}
 .contact-bottom {
 	margin: auto;
 	padding-bottom: 90px;
@@ -293,25 +311,27 @@ footer {
 	height: 60px;
 	color: #FAFAFA;
 	text-align: center;
-	padding-top: 20px;
+	line-height: 60px;
 }
 
 @media screen and (max-width: 425px) {
 	header {
-		width: 90%;
-		margin: 0 5%;
+		width: 100%;
+		/*margin: 0 5%;*/
+	}
+	br {
+		display: none;
 	}
 	#humberger {
 		position: relative;
-		left: 210px;
+		float: right;
 		height: 44px;
 		width: 44px;
 		display: inline-block;
 		margin: 3px 8px 3px 0;
-		box-sizing: border-box;
 		background-color: #EC715F;
 		border: 2px solid #fAfAfA;
-		border-radius:4px;
+		/*border-radius:4px;*/
 	}
 	#humberger div {
 		position: absolute;
@@ -345,52 +365,59 @@ footer {
 		display: none;
 	}
 	.main-visual {
-		width: 90%;
+		width: 100%;
 		height: 650px;
-		margin: 0 5%;
+		/*margin: 0 5%;*/
 		background-image: url(img/code.png);
 	}
 	.main-visual-headline {
 		font-size: 40px;
 	}
 	.portfolio {
-		width: 90%;
-		margin: 0 5% ;
+		width: 100%;
+		/*margin: 0 5%;*/
+	}
+	.portfolio-text {
+		margin: 0 5%;
 	}
 
 	.portfolio-content {
 		width: 100%;
 	}
-	.portfolio-image {
-		width: 300px;
-		margin-right: 0px;
+	.line-height {
+		text-align: center;
+		margin: 0 40px;
 	}
-	.portfolio-image2 {
-		width: 300px;
-		margin-right: 0;
-	}
-	.portfolio-image:nth-child(1) {
+	.line-height div:nth-child(1) {
 		display: none;
 	}
-	.portfolio-image:nth-child(3) {
+	.line-height div:nth-child(3) {
 		display: none;
 	}
-	.portfolio-image2:nth-child(2) {
+	.line-height div:nth-child(5) {
 		display: none;
+	}
+	.image1 {
+		float: none;
 	}
 	.feature {
-		width: 90%;
+		width: 100%;
+		/*margin: 0 5%;*/
+	}
+	.feature-text {
 		margin: 0 5%;
 	}
-	.box {
+	.social {
 		width: 90%;
+		margin: auto;
 	}
-
 	.feature-box {
 		float: none;
-		/*margin-left: 20px;*/
-		/*margin-top: 10px;*/
-		margin: 0 0 10px 20px;
+		margin: auto;
+	}
+	.feature-box2 {
+		float: none;
+		margin: auto;
 	}
 	.feature-box:nth-child(2) {
 		float: none;
@@ -398,16 +425,23 @@ footer {
 		/*margin-top: 10px;*/
 		margin: 0 0 90px 20px;
 	}
-	.feature-box2 {
-		margin: 0 0 10px 20px;
+	.feature-text2 {
+		text-align: left;
+		width: 90%;
+		margin: auto auto 10px auto;
+	}
+	.feature-visual div:nth-child(3) {
+		margin-bottom: 90px;
+	}
+	.feature-visual {
+		width: 100%;
 	}
 	.profile {
-		width: 90%;
-		margin: 0 5%;
+		width: 100%;
+		/*margin: 0 5%;*/
 	}
 	.profile-image {
-		width: 250px;
-		margin-left: 60px;
+		margin-left: auto;
 
 	}
 	.profile-headline2 {
@@ -419,15 +453,19 @@ footer {
 		width: 100%;
 	}
 	.profile-image-box {
-		/*margin: 0 auto;*/
-		/*padding: 0;*/
-		/*width: 100%;*/
+		text-align: center;
+		width: 100%;
 	}
 	.profile-text-box {
 		width: 100%;
+		text-align: center;
+	}
+	.profile-text {
+		width: 90%;
+		margin: 0 5%;
 	}
 	.profile-text2 {
-		width: 100%;
+		width: 90%;
 		text-align: center;
 		margin: auto;
 		padding-bottom: 0px;
@@ -453,13 +491,16 @@ footer {
 		margin: 0 5%;
 	}
 	.contact-box-left, .contact-box-right {
+		width: 90%;
 		float: none;
 		text-align: center;
 		padding-left: 0;
-		margin-right: 5%;
+		margin: 0 5%;
+		/*margin-right: 5%;*/
 	}
 	.sns {
 		text-align: center;
+		margin-top: 20px;
 	}
 	footer {
 		width: 90%;
